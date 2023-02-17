@@ -1,0 +1,149 @@
+.hide {
+  display: none;
+}
+
+.accessability-widget-container {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  background: white;
+  z-index: 999;
+  border: 2px gray solid;
+
+  .accessability-button-close {
+    width: 128px;
+    height: 40px;
+    margin-top: 0;
+    min-width: auto;
+    padding: 11.2px 16px 9.6px 16px;
+    top: 21.6px;
+    font-size: 22.4px;
+    right: 0px;
+
+    &:after {
+      font-size: 22.4px;
+      right: 10.4px;
+    }
+  }
+
+  .block-container {
+    padding-top: 54.4px;
+    .content-block {
+      gap: 32px;
+      padding: 48px 32px 16px 32px;
+      .block-titles {
+        h2 {
+          font-size: 24px;
+          color: #212121;
+          font-weight: bold;
+        }
+      }
+
+      .content-group {
+        display: flex;
+        flex-direction: column;
+        gap: 9.6px;
+        padding: 0px 16px;
+
+        .radio-group {
+          display: flex;
+          gap: 15%;
+          align-items: center;
+          input[type="radio"] {
+            border: 0;
+            clip: rect(0, 0, 0, 0);
+            height: 1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute !important;
+            white-space: nowrap;
+            width: 1px;
+          }
+          [type="radio"] + label {
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #a7a7a7;
+            transition: 0.3s;
+          }
+          input[type="radio"]:checked + label {
+            background-color: $cinnabar;
+          }
+          input[type="radio"]:hover + label {
+            cursor: pointer;
+            background-color: darken($cinnabar, 10);
+            color: $white;
+          }
+
+          .base {
+            width: 40px;
+            height: 40px;
+            padding: 11.2px;
+          }
+          .md {
+            width: 48px;
+            height: 48px;
+            padding: 12.8px;
+          }
+
+          .lg {
+            width: 56px;
+            height: 56px;
+            padding: 14.4px;
+          }
+        }
+        .cursor {
+          .base {
+            width: 40px;
+            height: 40px;
+            padding: 12.2px;
+          }
+          .md {
+            width: 48px;
+            height: 48px;
+            padding: 14.2px;
+          }
+
+          .lg {
+            width: 56px;
+            height: 56px;
+            padding: 15.8px;
+          }
+        }
+
+        h3 {
+          text-align: center;
+          font-size: 22.4px;
+          font-weight: bold;
+        }
+      }
+      .accessability-button-reset {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.accessability-button {
+  z-index: 998;
+  border-radius: 999px;
+  height: 60px;
+  width: 60px;
+  overflow: hidden;
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  transition: 0.6s;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    transform: scale(1.3);
+  }
+  svg {
+    fill: $azure;
+    background-color: $white;
+  }
+}
